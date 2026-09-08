@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Sainik Bhojnalaya — Item Control</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div><h1>🍽️ Sainik Bhojnalaya</h1><span>Item Control</span></div><div id="conn">● Disconnected</div></header>
+<main>
+<section class="toolbar">
+<input id="search" placeholder="Search menu item…">
+<select id="cat"><option value="">All categories</option></select>
+<select id="status"><option value="">All status</option><option value="on">ON</option><option value="soldout">SOLD OUT</option><option value="off">OFF</option></select>
+<button id="refresh">↻ Refresh</button><button id="settings">⚙ Settings</button>
+</section>
+<section class="stats"><div><b id="onCount">0</b><span>Available</span></div><div><b id="soldCount">0</b><span>Sold Out</span></div><div><b id="offCount">0</b><span>OFF</span></div><div><b id="totalCount">0</b><span>Total</span></div></section>
+<section class="bulk"><button data-bulk="on">ALL ON</button><button data-bulk="soldout">SOLD OUT</button><button data-bulk="off">ALL OFF</button></section>
+<section id="items"></section>
+</main>
+<div id="modal" class="modal hidden"><div class="modalbox"><h2>Connection Settings</h2><label>WooCommerce site URL<input id="url" placeholder="https://example.com"></label><label>WordPress username<input id="user"></label><label>Application password<input id="pass" type="password"></label><p class="hint">Use HTTPS. For a production deployment, use a dedicated token/backend rather than storing a privileged password in a distributed app.</p><div><button id="saveSettings">Save & Connect</button><button id="closeSettings">Cancel</button></div></div></div>
+<div id="toast"></div>
+<script src="renderer.js"></script>
+</body></html>
